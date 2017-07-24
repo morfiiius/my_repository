@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Хмельницкий областной Благотворительный фонд "сион"</title>
+	<meta name="description" content="оказание материальной, финансовой, организационной, содействие социальной реабилитации и адаптации людей, находящихся в местах лишения свободы">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+	<link rel="stylesheet" href="gallery/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	
+</head>
+<body>
+
+<div class="open"></div>
+
+<ul>
+    <li data-id="block1">1111111111111</li>
+    <li data-id="block2">2222222222222</li>
+</ul>
+
+<script type="text/javascript">
+	$('ul > li').hover(function () {
+        $(this).addClass('in');
+    });
+
+    $('ul > li').mouseleave(function () {
+        $(this).removeClass('in');
+    });
+</script>
+
+==================================================
+
+<p>Кликни по мне, чтобы клонировать</p>
+
+<script type="text/javascript">
+
+
+$("p").click(function () {
+    $(this).clone(true).appendTo('.open');
+});
+</script>
+
+
+====================================================
+
+<div class="eco" id='txt1' ></div>
+
+<div class="example"  id="111">
+	<div>
+		<p>Привет! я 1</p>	
+	</div>
+</div>
+
+<div class="example" id="222">
+	<div>
+		<p>Привет! я 2</p>	
+	</div>
+</div>
+
+<!-- [data-id='" +i+ "'] -->
+<script type="text/javascript">
+$(function (){ 
+    $('.example').click(function(){
+       //var html     = $(this).text();
+       var theClass = $(this).attr('id');
+
+       $(".eco").toggleClass(theClass);
+
+       $('#txt1').html(theClass); 
+
+    });
+});
+</script>
+
+======================================================
+
+<div id="display"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var danfa = 'Форум web-мастера и ПК'; // Создаём переменную
+        $('#display').html(danfa); 
+    });
+</script>
+
+=============================================================
+
+
+<ul>
+	<li class="click1" id="1111">111</li>
+	<!-- <li class="click2" id="2222">222</li>
+	<li class="click3" id="3333">333</li>
+	<li class="click4" id="4444">444</li> -->
+</ul>
+
+<ul>
+	<li class="click1" id="5555click1">111</li>
+	<!-- <li class="click2" id="6666">222</li>
+	<li class="click3" id="7777">333</li>
+	<li class="click4" id="8888">444</li> -->
+</ul>
+
+<script type="text/javascript">
+	$('li').click(function(){
+		var theClass = $(this).attr('class');
+	  	$("." + theClass).toggleClass("left");
+	});
+</script>
+
+
+</body>
+</html>
